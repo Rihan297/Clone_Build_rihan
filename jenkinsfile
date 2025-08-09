@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    tools 
+    {
+        maven 'mymaven'
+    }
+
+    stages {
+        stage('Clone Repository')
+        {
+            steps {
+                git 'https://github.com/kamran761/DevOpsCodeDemo.git'
+            }
+        }
+    }
+    stage('Build Maven Code') 
+        {
+            steps {
+                sh 'mvn package'
+            }
+        }
+}
