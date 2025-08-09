@@ -1,22 +1,22 @@
-pipeline {
+    pipeline {
     agent any
-    tools 
-    {
-        maven 'mymaven'
+
+    tools {
+        maven 'mymaven' 
     }
 
     stages {
-        stage('Clone Repository')
-        {
+        stage('Clone Repository') {
             steps {
                 git 'https://github.com/kamran761/Clone_Build_Java_Maven.git'
             }
         }
-    }
-    stage('Build Maven Code') 
-        {
+
+        stage('Build Maven Code') {
             steps {
                 sh 'mvn package'
             }
         }
+    }
 }
+
