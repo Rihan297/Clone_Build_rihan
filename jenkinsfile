@@ -9,7 +9,7 @@ pipeline {
         stage('Clone Repository')
         {
             steps {
-                git 'https://github.com/kamran761/DevOpsCodeDemo.git'
+                git 'https://github.com/kamran761/Clone_Build_Java_Maven.git'
             }
         }
     }
