@@ -12,7 +12,8 @@
             }
         }
 
-        stage('Build Code') {
+        stage('Build maven Code') 
+        {
             steps {
                 sh 'mvn package'
             }
