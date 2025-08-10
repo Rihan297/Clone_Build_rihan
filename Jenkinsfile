@@ -2,21 +2,20 @@
     agent any
 
     tools {
-        maven 'mymaven' 
+        maven 'rihanmaven' 
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/kamran761/Clone_Build_Java_Maven.git'
+                git 'https://github.com/Rihan297/Clone_Build_rihan.git'
             }
         }
 
-        stage('Build Maven Code') {
+        stage('Build Code') {
             steps {
                 sh 'mvn package'
             }
         }
     }
 }
-
